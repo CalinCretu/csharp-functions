@@ -14,21 +14,24 @@
                 Console.Write("Inserisci il numero " + (i + 1) + ": ");
                 numeri[i] = Convert.ToInt32(Console.ReadLine());
             }
+            int[] numeriAlQuadrato = ElevaArrayAlQuadrato(numeri);          // Dichiaro un nuovo array con i numeri al quadrato
 
-            Console.WriteLine("Il tuo array:");
+            Console.WriteLine("\nIl tuo array:");
             StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
 
-            ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
+            // ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
+            Console.WriteLine("\nArray al quadrato:");
+            StampaArray(numeriAlQuadrato);
 
-            Console.WriteLine("Il tuo array:");
+            Console.WriteLine("\nControllo array originale: ");
             StampaArray(numeri);                    // Verifico se anche dopo che elevo al quadrato l'array originale rimane invariato
 
             int somma = sommaElementiArray(numeri); // Dichiaro la varabile somma per poterla richiamare nel Console.WriteLine
-            Console.WriteLine("La somma di tutti i numeri è: " + somma);
+            Console.WriteLine("\nLa somma di tutti i numeri è: " + somma);
 
-            int[] numeriAlQuadrato = ElevaArrayAlQuadrato(numeri);          // Dichiaro un nuovo array con i numeri al quadrato
+            
             int sommaQuadrati = sommaElementiArray(numeriAlQuadrato);       // Sommo gli elementi del nuovo array
-            Console.WriteLine("La somma di tutti i numeri elevati al quadrato è: " + sommaQuadrati);
+            Console.WriteLine("\nLa somma di tutti i numeri elevati al quadrato è: " + sommaQuadrati);
 
             void StampaArray(int[] array)           // Dichiaro la funzione con void poiche' puo' non deve restituire un valore specifico
             {                                       // Passo anche il parametro int[] array
@@ -73,13 +76,10 @@
             int[] ElevaArrayAlQuadrato(int[] array)
             {
                 int[] risultato = new int[array.Length];
-                Console.WriteLine("Array al quadrato:");
 
                 for (int i = 0; i < array.Length; i++)
                 {
-
                     risultato[i] = Quadrato(array[i]);
-                    Console.WriteLine(risultato[i]);
                 }
                 return risultato;
             }

@@ -5,7 +5,15 @@
         static void Main(string[] args)
         {
 
-            int[] numeri = { 2, 6, 7, 5, 3, 9 };    // Creo l'array a mio piacimento
+            Console.WriteLine("Quanti numeri vuoi inserire?");
+            int lunghezza = Convert.ToInt32(Console.ReadLine());
+            int[] numeri = new int[lunghezza];
+
+            for (int i = 0; i < lunghezza; i++)
+            {
+                Console.Write("Inserisci il numero " + (i + 1) + ": ");
+                numeri[i] = Convert.ToInt32(Console.ReadLine());
+            }
 
             StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
 

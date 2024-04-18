@@ -16,7 +16,7 @@
 
                         StampaVirgolaESpazio();
                 }
-                Console.Write(" ]");
+                Console.WriteLine(" ]");
             }
 
             void StampaVirgolaESpazio()         // Dichiaro la funzione void come sopra
@@ -34,11 +34,41 @@
                 return numero * numero;
             }
 
+            int sommaElementiArray(int[] array)
+            {
+                int somma = 0;
+                foreach (int elemento in array)
+                {
+                    somma += elemento;
+                }
+                return somma;
+            }
+
+
+
             int[] numeri = { 1, 2, 3, 4, 5, 6 };    // Creo l'array a mio piacimento
             StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
+            ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
 
-            
+            StampaArray(numeri);                    // Verifico se anche dopo che elevo al quadrato l'array originale rimane invariato
 
+
+
+
+            int[] ElevaArrayAlQuadrato(int[] array)
+            {
+                int[] risultato = new int[array.Length];
+                    Console.WriteLine("Array al quadrato");
+
+                for (int i = 0; i < array.Length; i++)
+                {
+
+                    risultato[i] = array[i] * array[i];
+                    
+                    Console.WriteLine(risultato[i]);
+                }
+                return risultato;
+            }
 
 
 

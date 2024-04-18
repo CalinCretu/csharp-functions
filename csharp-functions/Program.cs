@@ -24,7 +24,9 @@
             int somma = sommaElementiArray(numeri); // Dichiaro la varabile somma per poterla richiamare nel Console.WriteLine
             Console.WriteLine("La somma di tutti i numeri è: " + somma);
 
-            Console.WriteLine($"La somma degli elementi al quadrato è: {Quadrato(somma)}");
+            int[] numeriAlQuadrato = ElevaArrayAlQuadrato(numeri);          // Dichiaro un nuovo array con i numeri al quadrato
+            int sommaQuadrati = sommaElementiArray(numeriAlQuadrato);       // Sommo gli elementi del nuovo array
+            Console.WriteLine("La somma di tutti i numeri elevati al quadrato è: " + sommaQuadrati);
 
             void StampaArray(int[] array)           // Dichiaro la funzione con void poiche' puo' non deve restituire un valore specifico
             {                                       // Passo anche il parametro int[] array

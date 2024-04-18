@@ -44,16 +44,19 @@
                 return somma;
             }
 
-
-
-            int[] numeri = { 1, 2, 3, 4, 5, 6 };    // Creo l'array a mio piacimento
+            int[] numeri = { 2, 6, 7, 5, 3, 9 };    // Creo l'array a mio piacimento
+            
             StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
+            
             ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
+
 
             StampaArray(numeri);                    // Verifico se anche dopo che elevo al quadrato l'array originale rimane invariato
 
+            int somma = sommaElementiArray(numeri); // Dichiaro la varabile somma per poterla richiamare nel Console.WriteLine
+            Console.WriteLine("La somma di tutti i numeri è: " + somma);
 
-
+            
 
             int[] ElevaArrayAlQuadrato(int[] array)
             {

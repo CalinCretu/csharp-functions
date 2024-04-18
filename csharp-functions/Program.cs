@@ -4,8 +4,22 @@
     {
         static void Main(string[] args)
         {
-            void StampaArray(int[] array)       // Dichiaro la funzione con void poiche' puo' non deve restituire un valore specifico
-            {                                   // Passo anche il parametro int[] array
+
+            int[] numeri = { 2, 6, 7, 5, 3, 9 };    // Creo l'array a mio piacimento
+
+            StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
+
+            ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
+
+            StampaArray(numeri);                    // Verifico se anche dopo che elevo al quadrato l'array originale rimane invariato
+
+            int somma = sommaElementiArray(numeri); // Dichiaro la varabile somma per poterla richiamare nel Console.WriteLine
+            Console.WriteLine("La somma di tutti i numeri è: " + somma);
+
+            Console.WriteLine($"La somma degli elementi al quadrato è: {Quadrato(somma)}");
+
+            void StampaArray(int[] array)           // Dichiaro la funzione con void poiche' puo' non deve restituire un valore specifico
+            {                                       // Passo anche il parametro int[] array
                 Console.Write("[ ");
                 for (int i = 0; i < array.Length; i++)
                 {
@@ -19,7 +33,7 @@
                 Console.WriteLine(" ]");
             }
 
-            void StampaVirgolaESpazio()         // Dichiaro la funzione void come sopra
+            void StampaVirgolaESpazio()             // Dichiaro la funzione void come sopra
             {
                 Console.Write(", ");
             }
@@ -29,7 +43,7 @@
                 Console.Write("elemento ");
             }
 
-            int Quadrato(int numero)            // Dichiaro la fuziona che mi calcola il quadrato nel numero intero passato come parametro
+            int Quadrato(int numero)                // Dichiaro la fuziona che mi calcola il quadrato nel numero intero passato come parametro
             {
                 return numero * numero;
             }
@@ -43,20 +57,6 @@
                 }
                 return somma;
             }
-
-            int[] numeri = { 2, 6, 7, 5, 3, 9 };    // Creo l'array a mio piacimento
-            
-            StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
-            
-            ElevaArrayAlQuadrato(numeri);           // Richiamo la funzione ElevaArrayAlQuadrato con l'array come parametro
-
-
-            StampaArray(numeri);                    // Verifico se anche dopo che elevo al quadrato l'array originale rimane invariato
-
-            int somma = sommaElementiArray(numeri); // Dichiaro la varabile somma per poterla richiamare nel Console.WriteLine
-            Console.WriteLine("La somma di tutti i numeri è: " + somma);
-
-            
 
             int[] ElevaArrayAlQuadrato(int[] array)
             {
@@ -72,10 +72,6 @@
                 }
                 return risultato;
             }
-
-
-
-
         }
     }
 }

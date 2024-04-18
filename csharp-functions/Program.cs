@@ -6,7 +6,7 @@
         {
             void StampaArray(int[] array)       // Dichiaro la funzione con void poiche' puo' non deve restituire un valore specifico
             {                                   // Passo anche il parametro int[] array
-                Console.Write("(");
+                Console.Write("[ ");
                 for (int i = 0; i < array.Length; i++)
                 {
                     StampaElemento();
@@ -16,19 +16,33 @@
 
                         StampaVirgolaESpazio();
                 }
-                Console.Write(")");
+                Console.Write(" ]");
             }
+
             void StampaVirgolaESpazio()         // Dichiaro la funzione void come sopra
             {
                 Console.Write(", ");
             }
+
             void StampaElemento()
             {
                 Console.Write("elemento ");
             }
 
+            int Quadrato(int numero)            // Dichiaro la fuziona che mi calcola il quadrato nel numero intero passato come parametro
+            {
+                return numero * numero;
+            }
+
             int[] numeri = { 1, 2, 3, 4, 5, 6 };    // Creo l'array a mio piacimento
             StampaArray(numeri);                    // Richiamo la fuzione stampaArray passando il mio array come parametro
+
+            
+
+
+
+
+
         }
     }
 }
